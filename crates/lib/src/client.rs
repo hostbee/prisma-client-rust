@@ -131,7 +131,7 @@ pub struct PrismaClientInternals {
 }
 
 impl PrismaClientInternals {
-    pub(crate) async fn execute(&self, operation: Operation) -> Result<serde_value::Value> {
+    pub async fn execute(&self, operation: Operation) -> Result<serde_value::Value> {
         self.engine.execute(operation).await
     }
 
